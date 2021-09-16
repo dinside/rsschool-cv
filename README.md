@@ -1,3 +1,3 @@
 # rsschool-cv
 
-https://dinside.github.io/rsschool-cv/cvv
+https://dinside.github.io/rsschool-cv/cv
