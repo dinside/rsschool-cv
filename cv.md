@@ -67,7 +67,7 @@ console.log(formatDuration(3600));
 
 <h4>Experience at DEV:</h4>
 
-> OOO "IPLUS" TM COMNET - Junior Frontend Developer  12020 - to this day
+> OOO "IPLUS" TM COMNET - Junior Frontend Developer  03.09.2020 - to this day
 
 <h5>Educattion:</h5>
   
