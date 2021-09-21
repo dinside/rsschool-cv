@@ -377,7 +377,6 @@ img {
 
 .social__link2{
     font-size: var(--font-medium);
-    width: 33%;
     color: var(--title-color);
     margin: 10px;
     
@@ -390,7 +389,22 @@ img {
     }
 
     .footer__logo{
-        width: 30%;
+        width: 10%;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .footer__logo{
+        width: 10%;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .footer__logo{
+        width: 10%;
+        height: 20px;
     }
 }
 
