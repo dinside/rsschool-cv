@@ -382,6 +382,30 @@ img {
     
 }
 
+.containers{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.portfolio__container1,
+.portfolio__container2,
+.portfolio__container3{
+    text-align: center;
+
+}
+
+.images__site{
+    width: 70%;
+    height: 70%;
+    border-radius: 10%;
+    opacity: 0.8;
+}
+
+.title__site {
+    text-align: center;
+}
+
 @media screen and (max-width:320px) {
     .nav__list{
         grid-template-columns: repeat(2, 1fr);
@@ -398,6 +422,10 @@ img {
     .footer__logo{
         width: 10%;
         height: 20px;
+    }
+    
+    .containers{
+        flex-wrap: wrap;
     }
 }
 
