@@ -52,7 +52,7 @@
 
                     <li class="nav__item">
                         <a href="#code" class="nav__link">
-                            <i class='bx bx-code-alt nav__icon' ></i> Sample code
+                            <i class='bx bx-code-alt nav__icon' ></i> Code
                         </a>
                     </li>
 
@@ -157,14 +157,13 @@
             </div>
             <div class="resume__right">
 
-                <section class="skills section" id="skills">
+                <section class="skills section" id="experience">
                     <h2 class="section-title">Experience</h2>
 
                     <div class="experience__container bd-grid">
                         <div class="experience__content">
                             <div class="experience__time">
                                 <span class="experience__rounder"></span>
-                                <span class="experience__line"></span>
                             </div>
 
                             <div class="experience__data bd-grid">
@@ -190,18 +189,22 @@
                         </ul>
                     </div>
                 </section>
-                <section class="code">
+                <section class="code" id="code">
                     <h2 class="section-title">Example code</h2>
 
                     <div class="languages__container">
-                        <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(51, 51, 51); color: rgb(255, 255, 255);"><span class="hljs-function"><span class="hljs-keyword" style="color: rgb(252, 194, 140);">function</span> <span class="hljs-title" style="color: rgb(255, 255, 170);">createSecretHolder</span><span class="hljs-params">(secret)</span> </span>{
-                            <span class="hljs-keyword" style="color: rgb(252, 194, 140);">return</span> {
-                            getSecret:<span class="hljs-function"><span class="hljs-keyword" style="color: rgb(252, 194, 140);">function</span><span class="hljs-params">()</span></span>{
-                              <span class="hljs-keyword" style="color: rgb(252, 194, 140);">return</span> secret
-                              },
-                            setSecret:<span class="hljs-function"><span class="hljs-keyword" style="color: rgb(252, 194, 140);">function</span><span class="hljs-params">(v)</span></span>{
-                              secret=v}
-                            }
+                        <pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(0, 0, 0);"><span class="hljs-function"><span class="hljs-keyword" style="font-weight: 700;">function</span> <span class="hljs-title">cache</span>(<span class="hljs-params">func</span>) </span>{
+                            <span class="hljs-keyword" style="font-weight: 700;">const</span> cachedResults = {};
+                            <span class="hljs-keyword" style="font-weight: 700;">return</span> (...args) =&gt; {
+                              <span class="hljs-keyword" style="font-weight: 700;">const</span> key = <span class="hljs-built_in">JSON</span>.stringify(args);
+                          
+                              <span class="hljs-keyword" style="font-weight: 700;">if</span> (!(key <span class="hljs-keyword" style="font-weight: 700;">in</span> cachedResults)) {
+                                <span class="hljs-keyword" style="font-weight: 700;">const</span> result = func.apply(<span class="hljs-literal">null</span>, args);
+                                cachedResults[key] = result;
+                              }
+                          
+                              <span class="hljs-keyword" style="font-weight: 700;">return</span> cachedResults[key];
+                            };
                           }</pre>
                     </div>
                 </section>
